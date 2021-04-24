@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
+	 <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
+   	<link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
+   	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+    	*{
+    		margin: 0; padding: 0; font-family: 'Josefin Sans', sans-serif;
+    	}
+      .bg
+{
+  width: 100%;
+  z-index: 0;
+}
+
+.pa
+{
+  position: absolute;
+  width: 834px;
+  height: 123px;
+  left: 600px;
+  top: 1000px;
+  font-family: Open Sans;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 34px;
+  /* or 170% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.015em;
+
+  color: #000000;
+
+
+}
+.pb{
+  position: absolute;
+  width: 834px;
+  height: 968px;
+  left:  600px;
+  top: 1000px;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 34px;
+  /* or 170% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.015em;
+
+  color: #000000;
+}
+.pc{
+  position: absolute;
+  width: 825px;
+  height: 903px;
+  left: 600px;
+  top: 2521px;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 34px;
+  /* or 170% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.015em;
+
+  color: #000000;
+}
+.cont{
+  position: relative;
+  color: black;
+}
+
+.q1{
+  position: absolute;
+  width: 1049px;
+  height: 84px;
+  left: 296px;
+  top: 2570px;
+
+  font-family: Open Sans;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 50px;
+  /* or 139% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.015em;
+
+  /* Dark Green */
+
+  color: #06623B;
+
+}
+.q2{
+  position: absolute;
+  width: 1049px;
+  height: 125px;
+  left: 296px;
+  top: 2970px;
+
+  font-family: Open Sans;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 50px;
+  /* or 139% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.015em;
+
+  /* Dark Green */
+
+  color: #06623B;
+}
+.q3{
+  position: absolute;
+  width: 1049px;
+  height: 125px;
+  left: 296px;
+  top: 3300px;
+
+  font-family: Open Sans;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 50px;
+  /* or 139% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.015em;
+
+  /* Dark Green */
+
+  color: #06623B;
+}
+
+.q4{
+  position: absolute;
+  width: 1049px;
+  height: 125px;
+  left: 296px;
+  top: 3600px;
+
+  font-family: Open Sans;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 50px;
+  /* or 139% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.015em;
+
+  /* Dark Green */
+
+  color: #06623B;
+}
+
+.r1{
+position: relative;
+width: 250px;
+height: 650px;
+left: 189px;
+top: 2100px;
+background: #F6D743;
+
+}
+
+.r2{
+position: relative;
+width: 250px;
+height: 650px;
+left: 189px;
+top: 2800px;
+background: #F6D743;
+
+}
+.r3{
+  position: absolute;
+  width: 100%;
+  height: 191px;
+  left: 0px;
+  top: 3500px;
+background: #F6D743;
+
+}
+
+.pd{
+  position: absolute;
+  width: 827px;
+  height: 213px;
+  left: 600px;
+  top: 2700px;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 34px;
+
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.015em;
+
+  color: #000000;
+
+}
+
+  .bg2{
+   position: absolute;
+   width: 835px;
+   height: 669px;
+   left: 588px;
+   top: 1790px;
+
+
+ }
+
+.bg4{
+  position: absolute;
+width: 823px;
+height: 461px;
+left: 588px;
+top: 3150px;
+}
+
+ .logo{
+   position: absolute;
+   left: 200px
+ }
+ .list{
+   position: absolute;
+   width: 822px;
+   height: 246px;
+   left: 600px;
+   top: 3580px;
+
+   font-family: Calibri;
+   font-style: normal;
+   font-weight: 800;
+   font-size: 36px;
+   line-height: 34px;
+   /* or 94% */
+   display: flex;
+   align-items: center;
+   letter-spacing: -0.015em;
+
+   color: #649D66;
+ }
+.ul1{
+  position: absolute;
+  width: 822px;
+  height: 246px;
+  left: 600px;
+  top: 3730px;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 34px;
+}
+.pe{
+  position: absolute;
+  width: 827px;
+  height: 213px;
+  left: 600px;
+  top: 3400px;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 34px;
+
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.015em;
+
+  color: #000000;
+
+}
+.logo2{
+  position: absolute;
+  width: 86px;
+  height: 28px;
+  left: 526px;
+  top: 3550px;
+
+}
+.foot{
+  position: absolute;
+  width: 236px;
+  height: 46px;
+  left: 526px;
+  top: 3590px;
+
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.015em;
+
+  color: #FFFFFF;
+
+}
+
+
+    </style>
+
+    <title>Avakar</title>
+  </head>
+  <body>
+  	<header><nav class="navbar navbar-expand-lg navbar-light bg-warning">
+  <img class="logo" src="images/Sample Logo.png">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto ">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Services<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Portfolio<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Contact Us<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+      <a href="#" class="btn btn-primary bg-dark" >Register</a>
+  </div>
+</nav>
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-12">
+    <img class="bg" src="images/Blog 1 landing photo.png">
+</div>
+</div>
+</header>
+<header>
+<p class="pa">“Two weeks ago, Sascha, a Mumbai-based psychotherapist, had to counsel
+  herself after she found out that her sister, away in London, had tested positive for
+   Covid-19. Her mother was drowning in guilt for not pushing her daughter strongly
+   enough to come back home before the virus spread. And Sascha blamed herself for
+   not backing her mother’s decision. “It was an anxiety-provoking time for all of
+   us,” says the 27-year old. ”</p><br><br>
+   <p class="pb">The coronavirus pandemic has brutally disrupted lives around the world.With the effects of COVID-19 on our physical health increasingly documented, we can no longer collectively fail to notice its effects on our mental health. As it rapidly sweeps across the world, it is inducing a considerable degree of fear, worry and concern in the population at large and has elevated the rates of stress or anxiety.
+    <br> <br>In a national survey released by the American Psychiatric Association in March, 36% of respondents said that COVID-19 was seriously impacting their mental health and 48% were anxious about getting infected. Early reporting from Ireland shows a tenfold increase in the number of people seeking online counselling.
+  <br> <br> The coronavirus pandemic has brutally disrupted lives around the world.With the effects of COVID-19 on our physical health increasingly documented, we can no longer collectively fail to notice its effects on our mental health. As it rapidly sweeps across the world, it is inducing a considerable degree of fear, worry and concern in the population at large and has elevated the rates of stress or anxiety.
+  <br> <br> In a national survey released by the American Psychiatric Association in March, 36% of respondents said that COVID-19 was seriously impacting their mental health and 48% were anxious about getting infected. Early reporting from Ireland shows a tenfold increase in the number of people seeking online counselling.
+   </p>
+<img class="bg2" src = "images/lily-banse-iNsKPCS-Z5g-unsplash 1.png">
+<p class="pc">Family members may use deliberate and neglectful tactics to exert power, including continuously finding fault with them, belittling their effort, refusing access to jointly owned money and threatening to cause harm. Covid-19 has presented a scenario of increased incidence of family abuse, intimate partner violence, and greater complication in reporting and seeking help. With diminished community support, disconnection from social networks and inability to seek temporary refuge from ‘outside spaces’, women are experiencing chronic distress.
+  <br><br> Women are trapped in an escalating cycle of tension, power and are vulnerable to experiencing varied mental health concerns, including depression, anxiety and trauma. Stigma and lack of (and access to) social support often lead to internalization of abuse and directing the anger, humiliation and fear towards themselves, aggravating feelings of worthlessness and helplessness.
+  <br><br> Those grappling with substance abuse are equally vulnerable to feeling varied waves of intense mental sickness, as rehabilitation centres are not accessible now.The situation is tougher still for children who are either mute spectators or directly subjected to domestic violence. Even loud sounds would scare them. For a lot of kids, a lockdown means dysfunctional relationships in their family are staring at them.
+  <br><br>Migrants had faced the situation of spending a few days in temporary shelters, while trying to reach their native places. This has filled them with anxieties and fears stemming from various concerns, and are in urgent need of psycho-social support.Like all stages of life, old age brings its own challenges. Mental health problems are a normal consequence of growing old. However, coronavirus has instilled a greater risk of such problems by affecting people mostly above the middle age.
+  <br><br> Health care takers' concerns for personal safety, for their families, and for patient mortality are the important stress-triggering factors in the medical staff.Police officers are being “repeatedly exposed to trauma ” as they are increasingly called to homes where people have died during the coronavirus outbreak. Their experiences during the current outbreak have caused significant levels of mental illness.
+</p>
+<div class="cont">
+  <img class="r1" src="images/Rectangle 12.png">
+<p class="q1">“The best way out is always through! It is during the darkest moments that we must focus to see the light.”
+</p>
+<p class="pd">All of us have been affected in one way or another by changes brought about by loss of our personal freedom during the pandemic. Whatever the loss be, our mind and body will react to this change.This can shake our world, and how it does so, will depend on what has happened and what support we have in place to cope. We can feel anxious, sad, angry, shocked, grief-stricken, withdrawn, in disbelief, guilty, in denial – and experience these in no particular order. We can struggle with sleep, concentration, our appetite and making decisions. We can also experience physical pain, such as headaches and muscle pain, as well as less specific bodily reactions that are similar to feelings of anxiety.
+</p>
+<p class="q2">“However, it is entirely normal to feel such intense feelings. More than that, it’s important to acknowledge these feelings.You yourself, as much as anybody in the universe deserve “your” love and affection !”
+</p>
+  <img class="bg4" src="images/dominik-martin-JYFmYif4n70-unsplash.png">
+<p class="list"><b>
+BE KIND TO YOUR MIND</b></p>
+<p class="ul1">
+<b>1. Pause :</b> breathe & notice how you feel
+  <br><b>2. Take Breaks</b> : from Covid-19 content
+  <br><b>3. Make Time :</b> to reflect on what went well, however small
+  <br><b>4. Reach Out :</b> and stay connected
+<br><b>5. Seek Help :</b> if overwhelmed or unsafe
+</p>
+</div>
+
+<div class="cont">
+    <img class="r2" src="images/Rectangle 15.png">
+  <p class="q3">“When we are no longer able to change a situation, we are challenged to change ourselves.”
+  </p>
+  <p class="pe">It is a time of trying to make sense of the change our losses bring, whatever they are. It is about adjusting to our ‘new normal’.Most of the discussion about addressing COVID-19-related mental health problems is focused on what we can do as individuals.
+</p>
+<p class="q4">‘Hope is willing to leave unanswered questions and unknown futures unknown !”</p>
+
+</div>
+
+<div class="cont">
+<img class=" r3" src="images/Rectangle 16.png">
+<img class="logo2" src="images/Sample Logo.png">
+<p class="foot"> Seeing the world not as it is,<br> but as it could be.</p>
+</header>
+    <!-- <h1>Hello, world!</h1> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAZaEtDi1J2gV384G6ctgdsM9d8XBFZUe0",
+    authDomain: "landing-page-f67ce.firebaseapp.com",
+    databaseURL: "https://landing-page-f67ce.firebaseio.com",
+    projectId: "landing-page-f67ce",
+    storageBucket: "landing-page-f67ce.appspot.com",
+    messagingSenderId: "1016444693405",
+    appId: "1:1016444693405:web:7795457387819709485d74",
+    measurementId: "G-VWW67LG559"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const db = firebase.firestore();
+  db.settings({timestampsInSnapshots:true});
+</script>
+<script src = "script.js"></script>
+
+  </body>
+</html>

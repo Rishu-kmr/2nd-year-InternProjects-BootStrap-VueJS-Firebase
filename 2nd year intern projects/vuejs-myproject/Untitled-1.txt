@@ -1,0 +1,13 @@
+// run npm run build
+// delete everything inside public
+// copy dist to public
+// copy index.html to public
+// then tun firebase deploy
+
+
+user
+ siddhesh
+    first name
+    last name
+
+firebase.database.once('/users/siddhesh')

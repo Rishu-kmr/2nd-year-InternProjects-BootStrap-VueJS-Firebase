@@ -1,0 +1,65 @@
+.imgcont{
+  position: absolute;
+width: 809.1px;
+height: 903px;
+left: 0px;
+top: 63px;
+
+background: rgba(0, 0, 0, 0.4);
+}
+
+.textchange{
+  position: absolute;
+width: 360px;
+height: 177px;
+left: 80px;
+top: 316px;
+
+font-family: Titillium Web;
+font-style: normal;
+font-weight: 900;
+font-size: 98px;
+line-height: 149px;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.015em;
+
+color: #F6D743;
+}
+
+.image1{
+  position: absolute;
+width: 294.78px;
+height: 258.09px;
+left: calc(50% - 294.78px/2 + 254.89px);
+top: calc(50% - 258.09px/2 - 137.46px);
+background: rgba(0, 0, 0, 0.3);
+}
+.image2{
+  position: absolute;
+width: 347.54px;
+height: 304.18px;
+left: 1245.31px;
+top: 181.82px;
+
+background: rgba(0, 0, 0, 0.4);
+}
+.image3{
+  position: absolute;
+width: 294.78px;
+height: 256.5px;
+left: 910px;
+top: 509px;
+
+background: rgba(0, 0, 0, 0.4);
+}
+.image4{
+  position: absolute;
+width: 294.78px;
+height: 258.24px;
+left: 1245.31px;
+top: 508.76px;
+
+background: rgba(0, 0, 0, 0.4);
+}
